@@ -54,7 +54,7 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
 ### CVE-2020-15498
 
 - Categoría: Ausencia de un mecanismo de actualización seguro.
-- Descripción: Se detectó un problema en los enrutadores ASUS RT-AC1900P versiones anteriores a 3.0.0.4.385_20253. El enrutador acepta un certificado de servidor arbitrario para una actualización de firmware. El culpable es la opción --no-check-certificate pasada a la herramienta wget usada para descargar archivos de actualización de firmware.
+- Descripción: Se detectó un problema en los enrutadores ASUS RT-AC1900P versiones anteriores a 3.0.0.4.385_20253. El enrutador acepta un   certificado de servidor arbitrario para una actualización de firmware. El culpable es la opción --no-check-certificate pasada a la        herramienta wget usada para descargar archivos de actualización de firmware.
 - Gravedad: 5.9 Medium.
 - Metodo de explotacion: Un atacante podría explotar esta vulnerabilidad de la siguiente manera:
   - Realizar un ataque de hombre en el medio (MITM) en la red del enrutador vulnerable.
@@ -64,7 +64,23 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
 - Contramedidas posibles: Para mitigar esta vulnerabilidad:
   - Actualizar el firmware del enrutador ASUS  RT-AC1900P a la versión 3.0.0.4.385_20253 o posterior.
 
-    
+### CVE-2021-21819
+
+- Categoría: Servicios de Red Inseguro.
+- Descripción: Se presenta una vulnerabilidad de ejecución de código en la funcionalidad de Libcli Test Environment de D-LINK DIR-3040      versión 1.13B03. Una petición de red especialmente diseñada puede conllevar a una ejecución de un comando arbitrario. Un atacante puede   enviar una secuencia de peticiones para activar esta vulnerabilidad.
+- Gravedad: 7.2 High.
+- Metodo de explotacion: Un atacante podría explotar esta vulnerabilidad de la siguiente manera:
+  - Identificar un router D-LINK DIR-3040 vulnerable en la red.
+  - Crear una secuencia de peticiones de red maliciosa específicamente diseñadas.
+  - Enviar estas peticiones al router a través de la red.
+  - Aprovechar la vulnerabilidad en la funcionalidad Libcli Test Environment para ejecutar comandos abiertos.
+- Contramedidas posibles: Para mitigar esta vulnerabilidad:
+  - Implementar firewalls y sistemas de detección de intrusiones para monitorear y bloquear tráfico sospechoso.
+  - Limitar el acceso a la interfaz de administración del router solo a direcciones IP confiables.
+  - Desactivar servicios innecesarios en el router y usar contraseñas fuertes.
+  - Cambiar las credenciales por defecto del router y usar contraseñas fuertes.
+  - Considerar el uso de VLANs para aislar dispositivos críticos de la red general.
+
 
 
 
