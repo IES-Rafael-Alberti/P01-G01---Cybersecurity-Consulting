@@ -93,7 +93,14 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
   - Contramedidas posibles.
 Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior), donde esta funcionalidad ha sido deshabilitada por defecto. Además, se recomienda revisar y actualizar las configuraciones de seguridad para protegerse contra futuras vulnerabilidades.
 
-
-
-
-
+### CVE-2021-3711
+- Categoría. Transferencia y almacenamiento de datos inseguros.
+- Descripción. Heartbleed permite a un atacante remoto enviar solicitudes maliciosas a un servidor vulnerable, haciendo que el servidor envíe fragmentos de memoria (hasta 64KB) a la solicitud. Esto puede incluir información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos confidenciales. La vulnerabilidad surge de un error en la implementación del comando "Heartbeat" en OpenSSL, que permite a los servidores verificar que las conexiones TLS siguen activas.
+- Gravedad. 9.8 Critical
+- Método de explotación.
+  - 1. El atacante envía una solicitud "heartbeat" especialmente diseñada al servidor. Esta solicitud incluye un tamaño de datos mayor al real.
+  - 2. Debido a la vulnerabilidad, el servidor responde con más datos de los que debería, incluyendo fragmentos de su memoria.
+  - 3. Los datos devueltos pueden contener información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos confidenciales.
+  - 4. El atacante puede repetir este proceso varias veces para extraer más datos de la memoria del servidor.
+- Contramedidas posibles.
+  - Es crucial actualizar OpenSSL a una versión no vulnerable (a partir de la versión 1.0.1g) y reemplazar las claves de cifrado y certificados afectados. Además, se recomienda realizar auditorías de seguridad y monitorear las comunicaciones para detectar cualquier actividad sospechosa.
