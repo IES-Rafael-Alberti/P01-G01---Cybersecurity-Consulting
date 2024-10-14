@@ -35,5 +35,11 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
   - Ocurre cuándo la vulnerabilidad no está en el dispositivo, sino en las aplicaciones que lo administran (ej. un reloj que se conecta a   una app insegura en el teléfono móvil).
 - Ausencia de un mecanismo de actualización seguro.
   - Cuándo no se cuentan con mecanismos para realizar una actualización o no son seguros.
+- Uso de componentes inseguros o desactualizados.
+  - Corresponde al software o hardware con vulnerabilidades y que son utilizados en los dispositivos.
+- Insuficiente protección a la privacidad.
+  - Algunos dispositivos no cuentan con mecanismos suficientes para proteger y resguardar la información personal y     
+    confidencial que se guarda, procesa o transmite por el dispositivo.
+
 
 
