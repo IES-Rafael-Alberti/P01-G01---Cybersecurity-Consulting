@@ -49,6 +49,23 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
 - Ausencia de seguridad física.
   - Cuándo se pueden hacer cambios físicos al dispositivo y explotar vulnerabilidades.
 
+## Fase 2: Investigación de CVEs
+
+### CVE-2020-15498
+
+- Categoría: Ausencia de un mecanismo de actualización seguro.
+- Descripción: Se detectó un problema en los enrutadores ASUS RT-AC1900P versiones anteriores a 3.0.0.4.385_20253. El enrutador acepta un certificado de servidor arbitrario para una actualización de firmware. El culpable es la opción --no-check-certificate pasada a la herramienta wget usada para descargar archivos de actualización de firmware.
+- Gravedad: 5.9 Medium.
+- Metodo de explotacion: Un atacante podría explotar esta vulnerabilidad de la siguiente manera:
+  - Realizar un ataque de hombre en el medio (MITM) en la red del enrutador vulnerable.
+  - Interceptar la solicitud de actualización de firmware.
+  - Proporcionar un certificado falso junto con un firmware malicioso.
+  - El enrutador aceptaría el certificado falso y procedería a instalar el firmware malicioso.
+- Contramedidas posibles: Para mitigar esta vulnerabilidad:
+  - Actualizar el firmware del enrutador ASUS  RT-AC1900P a la versión 3.0.0.4.385_20253 o posterior.
+
+    
+
 
 
 
