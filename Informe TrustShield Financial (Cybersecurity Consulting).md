@@ -44,6 +44,10 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
   - Los dispositivos no cuentan con mecanismos para encriptar los datos.
 - Ausencia de gestión de dispositivos.
   - Una vulnerabilidad de gestión en dónde los usuarios y empresas desconocen la cantidad de dispositivos que se conectan a su red y el tipo de información que manejan.
+- Configuraciones por defecto inseguras.
+  - Cuándo las configuraciones que vienen en el dispositivo por parte del fabricante son inseguras.
+- Ausencia de seguridad física.
+  - Cuándo se pueden hacer cambios físicos al dispositivo y explotar vulnerabilidades.
 
 
 
