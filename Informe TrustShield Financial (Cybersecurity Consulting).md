@@ -30,5 +30,10 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
 - Contraseñas Débiles, Adivinables o codificadas.
   - Fáciles de adivinar o que, por defecto, permiten acceder a la configuración del dispositivo.
 - Servicios de Red Inseguro.
-  - Algunos dispositivos cuentan con servicios de red sin las medidas de seguridad adecuadas o tienen servicios innecesarios que solo los hacen más vulnerables
+  - Algunos dispositivos cuentan con servicios de red sin las medidas de seguridad adecuadas o tienen servicios innecesarios que solo los   hacen más vulnerables
+- Ecosistema de interfaces inseguras.
+  - Ocurre cuándo la vulnerabilidad no está en el dispositivo, sino en las aplicaciones que lo administran (ej. un reloj que se conecta a   una app insegura en el teléfono móvil).
+- Ausencia de un mecanismo de actualización seguro.
+  - Cuándo no se cuentan con mecanismos para realizar una actualización o no son seguros.
+
 
