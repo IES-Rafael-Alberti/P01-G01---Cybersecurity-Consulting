@@ -40,6 +40,11 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
 - Insuficiente protección a la privacidad.
   - Algunos dispositivos no cuentan con mecanismos suficientes para proteger y resguardar la información personal y     
     confidencial que se guarda, procesa o transmite por el dispositivo.
+- Transferencia y almacenamiento de datos inseguros.
+  - Los dispositivos no cuentan con mecanismos para encriptar los datos.
+- Ausencia de gestión de dispositivos.
+  - Una vulnerabilidad de gestión en dónde los usuarios y empresas desconocen la cantidad de dispositivos que se conectan a su red y el tipo de información que manejan.
+
 
 
 
