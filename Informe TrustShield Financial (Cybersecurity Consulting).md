@@ -23,3 +23,12 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
 - Comunicación No Cifrada.
 - Configuraciones Inseguras.
 - Falta de Segmentación de Red.
+  
+# Investigación de Vulnerabilidades
+## Fase 1: Categorías
+
+- Contraseñas Débiles, Adivinables o codificadas.
+  - Fáciles de adivinar o que, por defecto, permiten acceder a la configuración del dispositivo.
+- Servicios de Red Inseguro.
+  - Algunos dispositivos cuentan con servicios de red sin las medidas de seguridad adecuadas o tienen servicios innecesarios que solo los hacen más vulnerables
+
