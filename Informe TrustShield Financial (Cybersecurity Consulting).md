@@ -104,3 +104,15 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
   - 4. El atacante puede repetir este proceso varias veces para extraer más datos de la memoria del servidor.
 - Contramedidas posibles.
   - Es crucial actualizar OpenSSL a una versión no vulnerable (a partir de la versión 1.0.1g) y reemplazar las claves de cifrado y certificados afectados. Además, se recomienda realizar auditorías de seguridad y monitorear las comunicaciones para detectar cualquier actividad sospechosa.
+
+### CVE-2023-6324
+- Categoría. Ecosistema de interfaces inseguras.
+- Descripción. Es una vulnerabilidad crítica en el ThroughTek Kalay SDK, una plataforma utilizada para la comunicación segura entre dispositivos IoT. Esta vulnerabilidad se debe a que el SDK utiliza un valor PSK (Pre-Shared Key) predecible en la sesión DTLS (Datagram Transport Layer Security) cuando se encuentra con una identidad PSK inesperada.
+- Gravedad. 8.1 High
+- Método de explotación.
+  - El atacante identifica un dispositivo IoT que utiliza el ThroughTek Kalay SDK y que está configurado para usar una identidad PSK (Pre-Shared Key) predecible.
+  - El atacante intercepta la comunicación entre el dispositivo IoT y el servidor utilizando técnicas de ataque de intermediario (Man-in-the-Middle).
+  - Debido a la vulnerabilidad, el SDK utiliza un valor PSK predecible cuando se encuentra con una identidad PSK inesperada. El atacante aprovecha esta debilidad para establecer una sesión DTLS (Datagram Transport Layer Security) con el dispositivo.
+  - Una vez establecida la sesión, el atacante puede acceder a la comunicación entre el dispositivo IoT y el servidor, permitiendo la interceptación y manipulación de datos sensibles transmitidos entre los dispositivos.
+- Contramedidas posibles.
+  - Es crucial actualizar a una versión no vulnerable del ThroughTek Kalay SDK y asegurarse de que las configuraciones de seguridad estén correctamente implementadas para protegerse contra futuras vulnerabilidades.
