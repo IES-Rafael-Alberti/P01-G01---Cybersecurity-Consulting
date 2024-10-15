@@ -116,3 +116,6 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
   - Una vez establecida la sesión, el atacante puede acceder a la comunicación entre el dispositivo IoT y el servidor, permitiendo la interceptación y manipulación de datos sensibles transmitidos entre los dispositivos.
 - Contramedidas posibles.
   - Es crucial actualizar a una versión no vulnerable del ThroughTek Kalay SDK y asegurarse de que las configuraciones de seguridad estén correctamente implementadas para protegerse contra futuras vulnerabilidades.
+
+# Clasificación y análisis
+![Tabla 1](./Assets/GRAVEDAD.png)
