@@ -84,12 +84,21 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
 ### CVE-2021-44228
 
   - Categoría. Ecosistema de interfaces inseguras.
-  - Descripción: La vulnerabilidad surge de la forma en que Log4j maneja las solicitudes de registro que contienen referencias a servidores LDAP (Lightweight Directory Access Protocol) y otros endpoints JNDI (Java Naming and Directory Interface). Un atacante puede enviar una solicitud especialmente diseñada que incluye una referencia a un servidor LDAP controlado por el atacante. Cuando Log4j procesa esta solicitud, intenta cargar y ejecutar código desde el servidor LDAP, permitiendo así la ejecución de código arbitrario.
+  - Descripción: La vulnerabilidad surge de la forma en que Log4j maneja las solicitudes de registro que contienen referencias a         
+  servidores LDAP (Lightweight Directory Access Protocol) y otros endpoints JNDI (Java Naming and Directory Interface). Un atacante 
+  puede enviar una solicitud especialmente diseñada que incluye una referencia a un servidor LDAP controlado por el atacante. Cuando 
+  Log4j procesa esta solicitud, intenta cargar y ejecutar código desde el servidor LDAP, permitiendo así la ejecución de código 
+  arbitrario.
   - Gravedad: 10.0 critical
   - Método de Explotación.
-    -  El atacante envía una solicitud de registro especialmente diseñada que contiene una referencia a un servidor LDAP (Lightweight Directory Access Protocol) controlado por el atacante. Esta solicitud se envía a una aplicación que utiliza la biblioteca Log4j para el registro de eventos.
-    -  Cuando Log4j procesa la solicitud, intenta resolver la referencia LDAP. Esto hace que la aplicación se conecte al servidor LDAP del atacante y descargue un objeto Java malicioso.
-    -  El objeto Java malicioso se ejecuta en el servidor vulnerable, permitiendo al atacante ejecutar código arbitrario. Esto puede llevar a la toma de control completa del sistema afectado, permitiendo al atacante realizar acciones como robar datos, instalar malware o lanzar ataques adicionales.
+    -  El atacante envía una solicitud de registro especialmente diseñada que contiene una referencia a un servidor LDAP (Lightweight   
+    Directory Access Protocol) controlado por el atacante. Esta solicitud se envía a una aplicación que utiliza la biblioteca Log4j para 
+    el registro de eventos.
+    -  Cuando Log4j procesa la solicitud, intenta resolver la referencia LDAP. Esto hace que la aplicación se conecte al servidor LDAP 
+    del atacante y descargue un objeto Java malicioso.
+    -  El objeto Java malicioso se ejecuta en el servidor vulnerable, permitiendo al atacante ejecutar código arbitrario. Esto puede 
+    llevar a la toma de control completa del sistema afectado, permitiendo al atacante realizar acciones como robar datos, instalar 
+    malware o lanzar ataques adicionales.
   - Contramedidas posibles.
 Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior), donde esta funcionalidad ha sido deshabilitada por defecto. Además, se recomienda revisar y actualizar las configuraciones de seguridad para protegerse contra futuras vulnerabilidades.
 
@@ -98,24 +107,39 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
 - Descripción. Heartbleed permite a un atacante remoto enviar solicitudes maliciosas a un servidor vulnerable, haciendo que el servidor envíe fragmentos de memoria (hasta 64KB) a la solicitud. Esto puede incluir información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos confidenciales. La vulnerabilidad surge de un error en la implementación del comando "Heartbeat" en OpenSSL, que permite a los servidores verificar que las conexiones TLS siguen activas.
 - Gravedad. 9.8 Critical
 - Método de explotación.
-  -  El atacante envía una solicitud "heartbeat" especialmente diseñada al servidor. Esta solicitud incluye un tamaño de datos mayor al real.
+  -  El atacante envía una solicitud "heartbeat" especialmente diseñada al servidor. Esta solicitud incluye un tamaño de datos mayor al 
+  real.
   -  Debido a la vulnerabilidad, el servidor responde con más datos de los que debería, incluyendo fragmentos de su memoria.
-  -  Los datos devueltos pueden contener información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos confidenciales.
+  -  Los datos devueltos pueden contener información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos 
+  confidenciales.
   -  El atacante puede repetir este proceso varias veces para extraer más datos de la memoria del servidor.
 - Contramedidas posibles.
-  - Es crucial actualizar OpenSSL a una versión no vulnerable (a partir de la versión 1.0.1g) y reemplazar las claves de cifrado y certificados afectados. Además, se recomienda realizar auditorías de seguridad y monitorear las comunicaciones para detectar cualquier actividad sospechosa.
+  - Es crucial actualizar OpenSSL a una versión no vulnerable (a partir de la versión 1.0.1g) y reemplazar las claves de cifrado y 
+  certificados afectados. Además, se recomienda realizar auditorías de seguridad y monitorear las comunicaciones para detectar cualquier 
+  actividad sospechosa.
 
 ### CVE-2023-6324
 - Categoría. Ecosistema de interfaces inseguras.
 - Descripción. Es una vulnerabilidad crítica en el ThroughTek Kalay SDK, una plataforma utilizada para la comunicación segura entre dispositivos IoT. Esta vulnerabilidad se debe a que el SDK utiliza un valor PSK (Pre-Shared Key) predecible en la sesión DTLS (Datagram Transport Layer Security) cuando se encuentra con una identidad PSK inesperada.
 - Gravedad. 8.1 High
 - Método de explotación.
-  - El atacante identifica un dispositivo IoT que utiliza el ThroughTek Kalay SDK y que está configurado para usar una identidad PSK (Pre-Shared Key) predecible.
-  - El atacante intercepta la comunicación entre el dispositivo IoT y el servidor utilizando técnicas de ataque de intermediario (Man-in-the-Middle).
-  - Debido a la vulnerabilidad, el SDK utiliza un valor PSK predecible cuando se encuentra con una identidad PSK inesperada. El atacante aprovecha esta debilidad para establecer una sesión DTLS (Datagram Transport Layer Security) con el dispositivo.
-  - Una vez establecida la sesión, el atacante puede acceder a la comunicación entre el dispositivo IoT y el servidor, permitiendo la interceptación y manipulación de datos sensibles transmitidos entre los dispositivos.
+  - El atacante identifica un dispositivo IoT que utiliza el ThroughTek Kalay SDK y que está configurado para usar una identidad PSK 
+  (Pre-Shared Key) predecible.
+  - El atacante intercepta la comunicación entre el dispositivo IoT y el servidor utilizando técnicas de ataque de intermediario     
+  (Man-in-the-Middle).
+  - Debido a la vulnerabilidad, el SDK utiliza un valor PSK predecible cuando se encuentra con una identidad PSK inesperada. El atacante 
+  aprovecha esta debilidad para establecer una sesión DTLS (Datagram Transport Layer Security) con el dispositivo.
+  - Una vez establecida la sesión, el atacante puede acceder a la comunicación entre el dispositivo IoT y el servidor, permitiendo la 
+  interceptación y manipulación de datos sensibles transmitidos entre los dispositivos.
 - Contramedidas posibles.
-  - Es crucial actualizar a una versión no vulnerable del ThroughTek Kalay SDK y asegurarse de que las configuraciones de seguridad estén correctamente implementadas para protegerse contra futuras vulnerabilidades.
+  - Es crucial actualizar a una versión no vulnerable del ThroughTek Kalay SDK y asegurarse de que las configuraciones de seguridad 
+  estén correctamente implementadas para protegerse contra futuras vulnerabilidades.
 
 # Clasificación y análisis
 ![Tabla 1](./Assets/GRAVEDAD.png)
+
+<br>
+<br>
+
+![Tabla 2](./Assets/FACILIDAD%20DE%20EXPLOTACION.png)
+
