@@ -9,21 +9,18 @@
   - [Fase 1: Categorías](#fase-1-categorías)
   - [Fase 2: Investigación de CVEs](#fase-2-investigación-de-cves)
 - [Clasificación y análisis](#clasificación-y-análisis)
+  - [Gravedad](#gravedad)
+  - [Facilidad de explotación](#facilidad-de-explotacion)
+  - [Relevancia para TrustShield Financial](#relevancia-para-trustshield-financial)
 - [Propuesta de contramedidas](#propuesta-de-contramedidas)
 - [Conclusión](#conclusión)
 
-
+<br><br>
 # Introducción
 
-Hemos recibido un encargo por parte de la empresa TrustShield Financial, dónde nos ha pedido realizar un análisis de su infraestructura tecnológica. Pretenden que identifiquemos vulnerabilidades críticas que podrían comprometer la confidencialidad, integridad y disponibilidad de los datos financieros. Para ello nos hemos centrado en la categoría de tecnologías IoT ya que estos dispositivos están cada vez más presentes en nuestra vida cotidiana y en entornos industriales, lo que los convierte en un objetivo atractivo para los atacantes. La interconexión de estos dispositivos ofrece numerosas ventajas, como la mejora de la eficiencia operativa y la creación de nuevas oportunidades de negocio. Sin embargo, también introduce riesgos significativos en términos de seguridad.
+La empresa TrustShield Financial confía en nosotros para llevar a cabo un análisis detallado de su infraestructura tecnológica, con el propósito de identificar vulnerabilidades críticas que pudieran comprometer la confidencialidad, integridad y disponibilidad de la información financiera. El enfoque principal ha sido en la categoría de tecnologías IoT, dado que estos dispositivos han adquirido una creciente relevancia tanto en el ámbito cotidiano como en entornos industriales, lo que los convierte en un objetivo potencialmente atractivo para agentes maliciosos. La interconexión de dichos dispositivos proporciona indudables beneficios, como la optimización de la eficiencia operativa y la generación de nuevas oportunidades comerciales; sin embargo, también introduce riesgos significativos en términos de seguridad, los cuales deben ser gestionados con la máxima diligencia.
 
-En nuestra investigación, hemos identificado varias categorías de vulnerabilidades que afectan a los dispositivos IoT. Algunas de las más comunes incluyen:
-- Autenticación Débil. 
-- Actualizaciones de Firmware Inseguras.
-- Comunicación No Cifrada.
-- Configuraciones Inseguras.
-- Falta de Segmentación de Red.
-  
+<br><br>  
 # Investigación de Vulnerabilidades
 ## Fase 1: Categorías
 
@@ -49,10 +46,11 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
 - Ausencia de seguridad física.
   - Cuándo se pueden hacer cambios físicos al dispositivo y explotar vulnerabilidades.
 
+<br>
+
 ## Fase 2: Investigación de CVEs
 
 ### CVE-2020-15498
-
 - Categoría: Ausencia de un mecanismo de actualización seguro.
 - Descripción: Se detectó un problema en los enrutadores ASUS RT-AC1900P versiones anteriores a 3.0.0.4.385_20253. El enrutador acepta un   certificado de servidor arbitrario para una actualización de firmware. El culpable es la opción --no-check-certificate pasada a la        herramienta wget usada para descargar archivos de actualización de firmware.
 - Gravedad: 5.9 Medium.
@@ -61,11 +59,10 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
   - Interceptar la solicitud de actualización de firmware.
   - Proporcionar un certificado falso junto con un firmware malicioso.
   - El enrutador aceptaría el certificado falso y procedería a instalar el firmware malicioso.
-- Contramedidas posibles: Para mitigar esta vulnerabilidad:
+- Contramedidas posibles para mitigar esta vulnerabilidad:
   - Actualizar el firmware del enrutador ASUS  RT-AC1900P a la versión 3.0.0.4.385_20253 o posterior.
 
 ### CVE-2021-21819
-
 - Categoría: Servicios de Red Inseguro.
 - Descripción: Se presenta una vulnerabilidad de ejecución de código en la funcionalidad de Libcli Test Environment de D-LINK DIR-3040      versión 1.13B03. Una petición de red especialmente diseñada puede conllevar a una ejecución de un comando arbitrario. Un atacante puede   enviar una secuencia de peticiones para activar esta vulnerabilidad.
 - Gravedad: 7.2 High.
@@ -74,15 +71,13 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
   - Crear una secuencia de peticiones de red maliciosa específicamente diseñadas.
   - Enviar estas peticiones al router a través de la red.
   - Aprovechar la vulnerabilidad en la funcionalidad Libcli Test Environment para ejecutar comandos abiertos.
-- Contramedidas posibles: Para mitigar esta vulnerabilidad:
-  - Implementar firewalls y sistemas de detección de intrusiones para monitorear y bloquear tráfico sospechoso.
-  - Limitar el acceso a la interfaz de administración del router solo a direcciones IP confiables.
+- Contramedidas posibles para mitigar esta vulnerabilidad:
   - Desactivar servicios innecesarios en el router y usar contraseñas fuertes.
   - Cambiar las credenciales por defecto del router y usar contraseñas fuertes.
   - Considerar el uso de VLANs para aislar dispositivos críticos de la red general.
+  - Actualizando el firmware a una versión superior a la 1.13B03.
 
 ### CVE-2021-44228
-
   - Categoría. Ecosistema de interfaces inseguras.
   - Descripción: La vulnerabilidad surge de la forma en que Log4j maneja las solicitudes de registro que contienen referencias a         
   servidores LDAP (Lightweight Directory Access Protocol) y otros endpoints JNDI (Java Naming and Directory Interface). Un atacante 
@@ -99,8 +94,8 @@ En nuestra investigación, hemos identificado varias categorías de vulnerabilid
     -  El objeto Java malicioso se ejecuta en el servidor vulnerable, permitiendo al atacante ejecutar código arbitrario. Esto puede 
     llevar a la toma de control completa del sistema afectado, permitiendo al atacante realizar acciones como robar datos, instalar 
     malware o lanzar ataques adicionales.
-  - Contramedidas posibles.
-Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior), donde esta funcionalidad ha sido deshabilitada por defecto. Además, se recomienda revisar y actualizar las configuraciones de seguridad para protegerse contra futuras vulnerabilidades.
+  - Contramedidas posibles para mitigar esta vulnerabilidad:
+    - Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior), donde esta funcionalidad ha sido deshabilitada por defecto. Además, se recomienda revisar y actualizar las configuraciones de seguridad para protegerse contra futuras vulnerabilidades.
 
 ### CVE-2021-3711
 - Categoría. Transferencia y almacenamiento de datos inseguros.
@@ -113,7 +108,7 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
   -  Los datos devueltos pueden contener información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos 
   confidenciales.
   -  El atacante puede repetir este proceso varias veces para extraer más datos de la memoria del servidor.
-- Contramedidas posibles.
+- Contramedidas posibles para mitigar esta vulnerabilidad:
   - Es crucial actualizar OpenSSL a una versión no vulnerable (a partir de la versión 1.0.1g) y reemplazar las claves de cifrado y 
   certificados afectados. Además, se recomienda realizar auditorías de seguridad y monitorear las comunicaciones para detectar cualquier 
   actividad sospechosa.
@@ -131,11 +126,13 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
   aprovecha esta debilidad para establecer una sesión DTLS (Datagram Transport Layer Security) con el dispositivo.
   - Una vez establecida la sesión, el atacante puede acceder a la comunicación entre el dispositivo IoT y el servidor, permitiendo la 
   interceptación y manipulación de datos sensibles transmitidos entre los dispositivos.
-- Contramedidas posibles.
+- Contramedidas posibles para mitigar esta vulnerabilidad:
   - Es crucial actualizar a una versión no vulnerable del ThroughTek Kalay SDK y asegurarse de que las configuraciones de seguridad 
   estén correctamente implementadas para protegerse contra futuras vulnerabilidades.
 
+<br><br> 
 # Clasificación y análisis
+## Gravedad
 En este apartado, se analiza la gravedad de las vulnerabilidades en función de su impacto potencial sobre la confidencialidad, integridad y disponibilidad de los datos o sistemas. La siguiente tabla presenta una clasificación de los CVEs según su nivel de riesgo:
 
 |   **_CVEs_**   | **_GRAVEDAD_** |
@@ -146,9 +143,7 @@ En este apartado, se analiza la gravedad de las vulnerabilidades en función de 
 | CVE-2021-21819 |       7.2      |
 | CVE-2020-15498 |       5.9      |
 
-<br>
-
-Esta tabla presenta la clasificación de las categorías: 
+La siguiente tabla muestra la clasificación de las categorías en orden descendente según su nivel de gravedad:
 
 |                  **_CATEGORÍAS_**                 	|
 |:-------------------------------------------------:	|
@@ -165,8 +160,7 @@ Esta tabla presenta la clasificación de las categorías:
 
 <br>
 
-<br>
-
+## Facilidad de explotación
 A continuación se evaluará la facilidad de explotación de las vulnerabilidades identificadas, considerando qué tan accesibles son para un atacante. La siguiente tabla ofrece una clasificación de estas vulnerabilidades según su nivel de facilidad de explotación:
 
 |   **_CVEs_**   	|
@@ -176,8 +170,6 @@ A continuación se evaluará la facilidad de explotación de las vulnerabilidade
 | CVE-2021-3711  	|
 | CVE-2021-21819 	|
 | CVE-2023-6324  	|
-
-<br>
 
 Esta tabla muestra el orden descendente de las categorías según su facilidad de explotación:
 
@@ -196,8 +188,7 @@ Esta tabla muestra el orden descendente de las categorías según su facilidad d
 
 <br>
 
-<br>
-
+## Relevancia para TrustShield Financial
 Seguidamente, se destacan las vulnerabilidades más críticas que afectan directamente la operación y seguridad financiera de TrustShield Financial. La siguiente tabla resume la relevancia de los CVEs escogidos para la empresa, en orden descendente:
 
 |   **_CVEs_**   	|
@@ -207,8 +198,6 @@ Seguidamente, se destacan las vulnerabilidades más críticas que afectan direct
 | CVE-2021-3711  	|
 | CVE-2021-21819 	|
 | CVE-2020-15498 	|
-
-<br>
 
 En cambio, esta tabla resume la relevancia de las diferentes categorías, en orden descendente:
 
@@ -225,17 +214,13 @@ En cambio, esta tabla resume la relevancia de las diferentes categorías, en ord
 |        Ausencia de gestión de dispositivos        	|
 |            Ausencia de seguridad física           	|
 
-<br>
 
+<br><br>
 # Propuesta de contramedidas
 Las contramedidas correspondientes a cada vulnerabilidad están descritas en el propio informe del CVE, de manera concisa y resumida para facilitar su implementación.
 
-
-
-
-
+<br><br>
 # Conclusión
-En conclusión, nuestros hallazgos revelan una preocupante cantidad de routers IoT vulnerables, lo que destaca la exposición de estos dispositivos a ciberataques. Dado que los IoT están integrados en nuestra vida cotidiana, es crucial implementar medidas de seguridad sólidas, como actualizaciones regulares de firmware y el uso de contraseñas fuertes. Reforzar la seguridad de estos dispositivos no solo protege la privacidad de los usuarios, sino que también previene posibles amenazas a gran escala.
+En conclusión, nuestros hallazgos evidencian una alarmante cantidad de dispositivos IoT vulnerables, lo que subraya la exposición de estos dispositivos a ciberataques. Dado que los dispositivos IoT están cada vez más integrados en nuestra vida cotidiana, resulta imperativo implementar medidas de seguridad robustas, tales como actualizaciones periódicas de firmware y la utilización de contraseñas complejas. Reforzar la seguridad de estos dispositivos no solo protege la privacidad de los usuarios, sino que también previene posibles amenazas a gran escala.
 
-Como vemos reflejado en la propuesta de contramedidas, al ser IoT nuestro tema, lo más importante es mantener estos dispositivos actualizados a la versión más reciente, evitando así (o al menos, poniendo más difícil a los atacantes), el acceso a estos dispositivos IoT.
-
+Tal como se refleja en la propuesta de contramedidas, al ser los dispositivos IoT el foco de nuestro análisis, la prioridad debe ser mantenerlos actualizados a la versión más reciente. Esto ayudará a mitigar, o al menos a dificultar, el acceso no autorizado por parte de posibles atacantes a estos dispositivos IoT.
