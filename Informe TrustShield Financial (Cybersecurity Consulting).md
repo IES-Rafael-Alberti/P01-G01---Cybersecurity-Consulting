@@ -179,7 +179,7 @@ A continuación se evaluará la facilidad de explotación de las vulnerabilidade
 
 <br>
 
-Esta tabla muestra el orden descendente de las categorías según su facilidad de explotación.
+Esta tabla muestra el orden descendente de las categorías según su facilidad de explotación:
 
 |                  **_Categorías_**                 	|
 |:-------------------------------------------------:	|
@@ -198,8 +198,39 @@ Esta tabla muestra el orden descendente de las categorías según su facilidad d
 
 <br>
 
+Seguidamente, se destacan las vulnerabilidades más críticas que afectan directamente la operación y seguridad financiera de TrustShield Financial. La siguiente tabla resume la relevancia de los CVEs escogidos para la empresa, en orden descendente:
+
+|   **_CVEs_**   	|
+|:--------------:	|
+| CVE-2021-44228 	|
+| CVE-2023-6324  	|
+| CVE-2021-3711  	|
+| CVE-2021-21819 	|
+| CVE-2020-15498 	|
+
+<br>
+
+En cambio, esta tabla resume la relevancia de las diferentes categorías, en orden descendente:
+
+|                  **_CATEGORÍAS_**                 	|
+|:-------------------------------------------------:	|
+| Transferencia y almacenamiento de datos inseguros 	|
+|   Contraseñas débiles, adivinables o codificadas  	|
+|             Servicios de red inseguros            	|
+|       Configuraciones por defecto inseguras       	|
+|   Uso de componentes inseguros o desactualizados  	|
+|         Ecosistema de interfaces inseguras        	|
+|  Ausencia de un mecanismo de actualización seguro 	|
+|      Insuficiente protección a la privacidad      	|
+|        Ausencia de gestión de dispositivos        	|
+|            Ausencia de seguridad física           	|
+
+<br>
 
 # Propuesta de contramedidas
+Las contramedidas correspondientes a cada vulnerabilidad están descritas en el propio informe del CVE, de manera concisa y resumida para facilitar su implementación.
+
+
 
 
 
