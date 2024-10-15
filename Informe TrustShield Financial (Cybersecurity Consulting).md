@@ -143,3 +143,8 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
 
 ![Tabla 2](./Assets/FACILIDAD%20DE%20EXPLOTACION.png)
 
+<br>
+<br>
+
+![Tabla 3](./Assets/CONTRAMEDIDAS.png)
+
