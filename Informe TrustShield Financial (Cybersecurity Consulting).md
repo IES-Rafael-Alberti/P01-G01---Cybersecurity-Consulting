@@ -237,3 +237,21 @@ Las contramedidas correspondientes a cada vulnerabilidad están descritas en el 
 En conclusión, nuestros hallazgos evidencian una alarmante cantidad de dispositivos IoT vulnerables, lo que subraya la exposición de estos dispositivos a ciberataques. Dado que los dispositivos IoT están cada vez más integrados en nuestra vida cotidiana, resulta imperativo implementar medidas de seguridad robustas, tales como actualizaciones periódicas de firmware y la utilización de contraseñas complejas. Reforzar la seguridad de estos dispositivos no solo protege la privacidad de los usuarios, sino que también previene posibles amenazas a gran escala.
 
 Tal como se refleja en la propuesta de contramedidas, al ser los dispositivos IoT el foco de nuestro análisis, la prioridad debe ser mantenerlos actualizados a la versión más reciente. Esto ayudará a mitigar, o al menos a dificultar, el acceso no autorizado por parte de posibles atacantes a estos dispositivos IoT.
+
+<br></br>
+
+# Fuentes
+## Categorías de vulnerabilidades IoT: 
+
+[Fuente a categorías](https://wiki.owasp.org/index.php/OWASP_Internet_of_Things_Project#tab=IoT_Top_10)
+
+[Fuente a categorías 2](https://www.fgcsecurity.com/owasp-top-10-de-vulnerabilidades-del-internet-de-las-cosas-iot/)
+
+[Desarrollo de categorías](https://www.computing.es/infraestructuras/las-vulnerabilidades-de-iot-mas-habituales-y-soluciones/)
+
+## Investigacion de CVE,s:
+
+[Fuente a busqueda de CVE](https://www.cve.org/Media/News/AllNews)
+
+[Fuente a busqueda de CVE 2](https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities)
+
