@@ -251,7 +251,7 @@ Tal como se refleja en la propuesta de contramedidas, al ser los dispositivos Io
 
 ## Investigacion de CVE,s:
 
-[Fuente a busqueda de CVE](https://www.cve.org/Media/News/AllNews)
+[Fuente a búsqueda de CVE](https://www.cve.org/Media/News/AllNews)
 
-[Fuente a busqueda de CVE 2](https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities)
+[Fuente a búsqueda de CVE 2](https://www.incibe.es/en/incibe-cert/early-warning/vulnerabilities)
 
