@@ -167,18 +167,41 @@ Esta tabla presenta la clasificación de las categorías:
 
 <br>
 
-![Tabla 2](./Assets/FACILIDAD%20DE%20EXPLOTACION.png)
+A continuación se evaluará la facilidad de explotación de las vulnerabilidades identificadas, considerando qué tan accesibles son para un atacante. La siguiente tabla ofrece una clasificación de estas vulnerabilidades según su nivel de facilidad de explotación:
+
+|   **_CVEs_**   	|
+|:--------------:	|
+| CVE-2021-44228 	|
+| CVE-2020-15498 	|
+| CVE-2021-3711  	|
+| CVE-2021-21819 	|
+| CVE-2023-6324  	|
 
 <br>
+
+Esta tabla muestra el orden descendente de las categorías según su facilidad de explotación.
+
+|                  **_Categorías_**                 	|
+|:-------------------------------------------------:	|
+|   Contraseñas débiles, adivinables o codificadas  	|
+|       Configuraciones por defecto inseguras       	|
+| Transferencia y almacenamiento de datos inseguros 	|
+|   Uso de componentes inseguros o desactualizados  	|
+|             Servicios de red inseguros            	|
+|  Ausencia de un mecanismo de actualización seguro 	|
+|         Ecosistema de interfaces inseguras        	|
+|      Insuficiente protección a la privacidad      	|
+|        Ausencia de gestión de dispositivos        	|
+|            Ausencia de seguridad física           	|
+
 <br>
 
-![Tabla 3](./Assets/CONTRAMEDIDAS.png)
+<br>
 
-<br>
-<br>
 
 # Propuesta de contramedidas
-![Tabla 4](./Assets/RELEVANTES%20PARA%20TSF.png)
+
+
 
 # Conclusión
 En conclusión, nuestros hallazgos revelan una preocupante cantidad de routers IoT vulnerables, lo que destaca la exposición de estos dispositivos a ciberataques. Dado que los IoT están integrados en nuestra vida cotidiana, es crucial implementar medidas de seguridad sólidas, como actualizaciones regulares de firmware y el uso de contraseñas fuertes. Reforzar la seguridad de estos dispositivos no solo protege la privacidad de los usuarios, sino que también previene posibles amenazas a gran escala.
