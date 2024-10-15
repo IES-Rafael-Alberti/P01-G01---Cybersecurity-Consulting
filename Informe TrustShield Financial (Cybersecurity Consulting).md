@@ -60,7 +60,8 @@ La empresa TrustShield Financial confía en nosotros para llevar a cabo un anál
   - Proporcionar un certificado falso junto con un firmware malicioso.
   - El enrutador aceptaría el certificado falso y procedería a instalar el firmware malicioso.
 - Contramedidas posibles para mitigar esta vulnerabilidad:
-  - Actualizar el firmware del enrutador ASUS  RT-AC1900P a la versión 3.0.0.4.385_20253 o posterior.
+  - Para solucionar esta vulnerabilidad, cualquier router de la marca Asus modelo RT-AC1900P, deberíamos actualizarlo a una versión superior a la 3.0.0.4.385_20253. Actualizar los router no es algo que se haga con frecuencia, pero es muy importante, ya que pueden ocurrir cosas como estas.
+
 
 ### CVE-2021-21819
 - Categoría: Servicios de Red Inseguro.
