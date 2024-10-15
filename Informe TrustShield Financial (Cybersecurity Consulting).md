@@ -2,7 +2,7 @@
 
 ![Portada](./Assets/PORTADA.png)
 
-# ÍNDICE
+# Índice
 
 - Introducción
 - Investigación de Vulnerabilidades
@@ -13,7 +13,7 @@
 - Conclusión
 
 
-# INTRODUCCIÓN
+# Introducción
 
 Hemos recibido un encargo por parte de la empresa TrustShield Financial, dónde nos ha pedido realizar un análisis de su infraestructura tecnológica. Pretenden que identifiquemos vulnerabilidades críticas que podrían comprometer la confidencialidad, integridad y disponibilidad de los datos financieros. Para ello nos hemos centrado en la categoría de tecnologías IoT ya que estos dispositivos están cada vez más presentes en nuestra vida cotidiana y en entornos industriales, lo que los convierte en un objetivo atractivo para los atacantes. La interconexión de estos dispositivos ofrece numerosas ventajas, como la mejora de la eficiencia operativa y la creación de nuevas oportunidades de negocio. Sin embargo, también introduce riesgos significativos en términos de seguridad.
 
