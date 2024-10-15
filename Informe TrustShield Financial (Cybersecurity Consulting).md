@@ -19,7 +19,8 @@
 <br><br>
 # Introducción
 
-La empresa TrustShield Financial confía en nosotros para llevar a cabo un análisis detallado de su infraestructura tecnológica, con el propósito de identificar vulnerabilidades críticas que pudieran comprometer la confidencialidad, integridad y disponibilidad de la información financiera. El enfoque principal ha sido en la categoría de tecnologías IoT, dado que estos dispositivos han adquirido una creciente relevancia tanto en el ámbito cotidiano como en entornos industriales, lo que los convierte en un objetivo potencialmente atractivo para agentes maliciosos. La interconexión de dichos dispositivos proporciona indudables beneficios, como la optimización de la eficiencia operativa y la generación de nuevas oportunidades comerciales; sin embargo, también introduce riesgos significativos en términos de seguridad, los cuales deben ser gestionados con la máxima diligencia.
+La empresa TrustShield Financial confía en nosotros para llevar a cabo un análisis detallado de su infraestructura tecnológica, con el propósito de identificar vulnerabilidades críticas que pudieran comprometer la confidencialidad, integridad y disponibilidad de la información financiera. El enfoque principal ha sido en la categoría de tecnologías IoT, dado que estos dispositivos han adquirido una creciente relevancia tanto en el ámbito cotidiano como en entornos industriales, lo que los convierte en un objetivo potencialmente atractivo para agentes maliciosos. 
+La interconexión de dichos dispositivos proporciona indudables beneficios, como la optimización de la eficiencia operativa y la generación de nuevas oportunidades comerciales; sin embargo, también introduce riesgos significativos en términos de seguridad, los cuales deben ser gestionados con la máxima diligencia.
 
 <br><br>  
 # Investigación de Vulnerabilidades
@@ -48,7 +49,7 @@ Por ejemplo  un dispositivo IoT que no puede recibir actualizaciones de segurida
 __Uso de componentes inseguros o desactualizados.__
 
 Algunos dispositivos no continúan utilizando software o hardware con vulnerabilidades conocidas, lo que puede ser explotado por atacantes si no se actualizan o reemplazan. Este problema se ve agravado cuando los fabricantes utilizan componentes de bajo coste que no reciben actualizaciones de seguridad.
-Un ejemplo pueden ser cámaras de seguridad que funcionan con versiones obsoletas del firmware, dejando abierta brechas que ya han sido corregidas en versiones más recientes
+Un ejemplo pueden ser cámaras de seguridad que funcionan con versiones obsoletas del firmware, dejando abierta brechas que ya han sido corregidas en versiones más recientes.
 
 __Insuficiente protección a la privacidad.__
 
@@ -82,7 +83,9 @@ Por ejemplo, un cajero automático que permite que al abrirlo físicamente, un a
 
 ### CVE-2020-15498
 - __Categoría:__ Ausencia de un mecanismo de actualización seguro.
-- __Descripción:__ Se detectó un problema en los enrutadores ASUS RT-AC1900P versiones anteriores a 3.0.0.4.385_20253. El enrutador acepta un certificado de servidor arbitrario para una actualización de firmware. El culpable es la opción --no-check-certificate pasada a la herramienta wget usada para descargar archivos de actualización de firmware.
+- __Descripción:__ Se detectó un problema en los enrutadores ASUS RT-AC1900P versiones anteriores a 3.0.0.4.385_20253. El enrutador 
+acepta un certificado de servidor arbitrario para una actualización de firmware. El culpable es la opción --no-check-certificate 
+pasada a la herramienta wget usada para descargar archivos de actualización de firmware.
 - __Gravedad:__ 5.9 Medium.
 - __Método de explotación:__ Un atacante podría explotar esta vulnerabilidad de la siguiente manera:
   - Realizar un ataque de hombre en el medio (MITM) en la red del enrutador vulnerable.
@@ -90,7 +93,9 @@ Por ejemplo, un cajero automático que permite que al abrirlo físicamente, un a
   - Proporcionar un certificado falso junto con un firmware malicioso.
   - El enrutador aceptaría el certificado falso y procedería a instalar el firmware malicioso.
 - __Contramedidas posibles para mitigar esta vulnerabilidad:__
-  - Para solucionar esta vulnerabilidad, cualquier router de la marca Asus modelo RT-AC1900P, deberíamos actualizarlo a una versión superior a la 3.0.0.4.385_20253. Actualizar los router no es algo que se haga con frecuencia, pero es muy importante, ya que pueden ocurrir cosas como estas.
+  - Para solucionar esta vulnerabilidad, cualquier router de la marca Asus modelo RT-AC1900P, deberíamos actualizarlo a una versión   
+    superior a la 3.0.0.4.385_20253. Actualizar los router no es algo que se haga con frecuencia, pero es muy importante, ya que pueden 
+    ocurrir cosas como estas.
 
 
 ### CVE-2021-21819
@@ -110,39 +115,58 @@ Por ejemplo, un cajero automático que permite que al abrirlo físicamente, un a
 
 ### CVE-2021-44228
   - __Categoría:__ Ecosistema de interfaces inseguras.
-  - __Descripción:__ La vulnerabilidad surge de la forma en que Log4j maneja las solicitudes de registro que contienen referencias a servidores LDAP (Lightweight Directory Access Protocol) y otros endpoints JNDI (Java Naming and Directory Interface). Un atacante puede enviar una solicitud especialmente diseñada que incluye una referencia a un servidor LDAP controlado por el atacante. Cuando Log4j procesa esta solicitud, intenta cargar y ejecutar código desde el servidor LDAP, permitiendo así la ejecución de código arbitrario.
+  - __Descripción:__ La vulnerabilidad surge de la forma en que Log4j maneja las solicitudes de registro que contienen referencias a 
+  servidores LDAP (Lightweight Directory Access Protocol) y otros endpoints JNDI (Java Naming and Directory Interface). Un atacante 
+  puede enviar una solicitud especialmente diseñada que incluye una referencia a un servidor LDAP controlado por el atacante. Cuando 
+  Log4j procesa esta solicitud, intenta cargar y ejecutar código desde el servidor LDAP, permitiendo así la ejecución de código 
+  arbitrario.
   - __Gravedad:__ 10.0 critical
   - __Método de Explotación:__
-    -  El atacante envía una solicitud de registro especialmente diseñada que contiene una referencia a un servidor LDAP (Lightweight Directory Access Protocol) controlado por el atacante. Esta solicitud se envía a una aplicación que utiliza la biblioteca Log4j para el registro de eventos.
+    -  El atacante envía una solicitud de registro especialmente diseñada que contiene una referencia a un servidor LDAP (Lightweight 
+    Directory Access Protocol) controlado por el atacante. Esta solicitud se envía a una aplicación que utiliza la biblioteca Log4j para 
+    el registro de eventos.
     -  Cuando Log4j procesa la solicitud, intenta resolver la referencia LDAP. Esto hace que la aplicación se conecte al servidor LDAP 
     del atacante y descargue un objeto Java malicioso.
-    -  El objeto Java malicioso se ejecuta en el servidor vulnerable, permitiendo al atacante ejecutar código arbitrario. Esto puede llevar a la toma de control completa del sistema afectado, permitiendo al atacante realizar acciones como robar datos, instalar malware o lanzar ataques adicionales.
+    -  El objeto Java malicioso se ejecuta en el servidor vulnerable, permitiendo al atacante ejecutar código arbitrario. Esto puede 
+    llevar a la toma de control completa del sistema afectado, permitiendo al atacante realizar acciones como robar datos, instalar 
+    malware o lanzar ataques adicionales.
   - __Contramedidas posibles para mitigar esta vulnerabilidad:__
-    - Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior), donde esta funcionalidad ha sido deshabilitada por defecto. Además, se recomienda revisar y actualizar las configuraciones de seguridad para protegerse contra futuras vulnerabilidades.
+    - Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior), donde esta funcionalidad ha sido deshabilitada 
+    por defecto. Además, se recomienda revisar y actualizar las configuraciones de seguridad para protegerse contra futuras 
+    vulnerabilidades.
 
 ### CVE-2021-3711
 - __Categoría:__ Transferencia y almacenamiento de datos inseguros.
 - __Descripción:__ Heartbleed permite a un atacante remoto enviar solicitudes maliciosas a un servidor vulnerable, haciendo que el servidor envíe fragmentos de memoria (hasta 64KB) a la solicitud. Esto puede incluir información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos confidenciales. La vulnerabilidad surge de un error en la implementación del comando "Heartbeat" en OpenSSL, que permite a los servidores verificar que las conexiones TLS siguen activas.
 - __Gravedad:__ 9.8 Critical
 - __Método de explotación:__
-  -  El atacante envía una solicitud "heartbeat" especialmente diseñada al servidor. Esta solicitud incluye un tamaño de datos mayor al real.
+  -  El atacante envía una solicitud "heartbeat" especialmente diseñada al servidor. Esta solicitud incluye un tamaño de datos mayor al 
+     real.
   -  Debido a la vulnerabilidad, el servidor responde con más datos de los que debería, incluyendo fragmentos de su memoria.
-  -  Los datos devueltos pueden contener información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos confidenciales.
+  -  Los datos devueltos pueden contener información sensible como nombres de usuario, contraseñas, claves de cifrado y otros datos 
+     confidenciales.
   -  El atacante puede repetir este proceso varias veces para extraer más datos de la memoria del servidor.
 - __Contramedidas posibles para mitigar esta vulnerabilidad:__
-  - Es crucial actualizar OpenSSL a una versión no vulnerable (a partir de la versión 1.0.1g) y reemplazar las claves de cifrado y certificados afectados. Además, se recomienda realizar auditorías de seguridad y monitorear las comunicaciones para detectar cualquier actividad sospechosa.
+  - Es crucial actualizar OpenSSL a una versión no vulnerable (a partir de la versión 1.0.1g) y reemplazar las claves de cifrado y 
+    certificados afectados. Además, se recomienda realizar auditorías de seguridad y monitorear las comunicaciones para detectar 
+    cualquier actividad sospechosa.
 
 ### CVE-2023-6324
 - __Categoría:__ Ecosistema de interfaces inseguras.
 - __Descripción:__ Es una vulnerabilidad crítica en el ThroughTek Kalay SDK, una plataforma utilizada para la comunicación segura entre dispositivos IoT. Esta vulnerabilidad se debe a que el SDK utiliza un valor PSK (Pre-Shared Key) predecible en la sesión DTLS (Datagram Transport Layer Security) cuando se encuentra con una identidad PSK inesperada.
 - __Gravedad:__ 8.1 High
 - __Método de explotación:__
-  - El atacante identifica un dispositivo IoT que utiliza el ThroughTek Kalay SDK y que está configurado para usar una identidad PSK (Pre-Shared Key) predecible.
-  - El atacante intercepta la comunicación entre el dispositivo IoT y el servidor utilizando técnicas de ataque de intermediario (Man-in-the-Middle).
-  - Debido a la vulnerabilidad, el SDK utiliza un valor PSK predecible cuando se encuentra con una identidad PSK inesperada. El atacante aprovecha esta debilidad para establecer una sesión DTLS (Datagram Transport Layer Security) con el dispositivo.
-  - Una vez establecida la sesión, el atacante puede acceder a la comunicación entre el dispositivo IoT y el servidor, permitiendo la interceptación y manipulación de datos sensibles transmitidos entre los dispositivos.
+  - El atacante identifica un dispositivo IoT que utiliza el ThroughTek Kalay SDK y que está configurado para usar una identidad PSK 
+    (Pre-Shared Key) predecible.
+  - El atacante intercepta la comunicación entre el dispositivo IoT y el servidor utilizando técnicas de ataque de intermediario     
+    (Man-in-the-Middle).
+  - Debido a la vulnerabilidad, el SDK utiliza un valor PSK predecible cuando se encuentra con una identidad PSK inesperada. El atacante 
+    aprovecha esta debilidad para establecer una sesión DTLS (Datagram Transport Layer Security) con el dispositivo.
+  - Una vez establecida la sesión, el atacante puede acceder a la comunicación entre el dispositivo IoT y el servidor, permitiendo la 
+    interceptación y manipulación de datos sensibles transmitidos entre los dispositivos.
 - __Contramedidas posibles para mitigar esta vulnerabilidad:__
-  - Es crucial actualizar a una versión no vulnerable del ThroughTek Kalay SDK y asegurarse de que las configuraciones de seguridad estén correctamente implementadas para protegerse contra futuras vulnerabilidades.
+  - Es crucial actualizar a una versión no vulnerable del ThroughTek Kalay SDK y asegurarse de que las configuraciones de seguridad 
+    estén correctamente implementadas para protegerse contra futuras vulnerabilidades.
 
 <br><br> 
 # Clasificación y análisis
