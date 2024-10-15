@@ -136,9 +136,35 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
   estén correctamente implementadas para protegerse contra futuras vulnerabilidades.
 
 # Clasificación y análisis
-![Tabla 1](./Assets/GRAVEDAD.png)
+En este apartado, se analiza la gravedad de las vulnerabilidades en función de su impacto potencial sobre la confidencialidad, integridad y disponibilidad de los datos o sistemas. La siguiente tabla presenta una clasificación de los CVEs según su nivel de riesgo:
+
+|   **_CVEs_**   | **_GRAVEDAD_** |
+|:--------------:|:--------------:|
+| CVE-2021-44228 |      10.0      |
+|  CVE-2021-3711 |       9.8      |
+|  CVE-2023-6324 |       8.1      |
+| CVE-2021-21819 |       7.2      |
+| CVE-2020-15498 |       5.9      |
 
 <br>
+
+Esta tabla presenta la clasificación de las categorías: 
+
+|                  **_CATEGORÍAS_**                 	|
+|:-------------------------------------------------:	|
+| Transferencia y almacenamiento de datos inseguros 	|
+|  Ausencia de un mecanismo de actualización seguro 	|
+|   Uso de componentes inseguros o desactualizados  	|
+|   Contraseñas débiles, adivinables o codificadas  	|
+|             Servicios de red inseguros            	|
+|       Configuraciones por defecto inseguras       	|
+|         Ecosistema de interfaces inseguras        	|
+|            Ausencia de seguridad física           	|
+|        Ausencia de gestión de dispositivos        	|
+|      Insuficiente protección a la privacidad      	|
+
+<br>
+
 <br>
 
 ![Tabla 2](./Assets/FACILIDAD%20DE%20EXPLOTACION.png)
