@@ -148,3 +148,8 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
 
 ![Tabla 3](./Assets/CONTRAMEDIDAS.png)
 
+<br>
+<br>
+
+# Propuesta de contramedidas
+![Tabla 4](./Assets/RELEVANTES%20PARA%20TSF.png)
