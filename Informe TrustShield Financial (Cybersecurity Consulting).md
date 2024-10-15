@@ -4,13 +4,13 @@
 
 # Índice
 
-- Introducción
-- Investigación de Vulnerabilidades
-  - Fase 1: Categorías
-  - Fase 2: Investigación de CVEs
-- Clasificación y análisis
-- Propuesta de contramedidas
-- Conclusión
+- [Introducción](#introducción)
+- [Investigación de Vulnerabilidades](#investigación-de-vulnerabilidades)
+  - [Fase 1: Categorías](#fase-1-categorías)
+  - [Fase 2: Investigación de CVEs](#fase-2-investigación-de-cves)
+- [Clasificación y análisis](#clasificación-y-análisis)
+- [Propuesta de contramedidas](#propuesta-de-contramedidas)
+- [Conclusión](#conclusión)
 
 
 # Introducción
