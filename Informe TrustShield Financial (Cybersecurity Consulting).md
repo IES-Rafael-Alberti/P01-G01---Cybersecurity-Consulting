@@ -24,27 +24,56 @@ La empresa TrustShield Financial confía en nosotros para llevar a cabo un anál
 # Investigación de Vulnerabilidades
 ## Fase 1: Categorías
 
-- Contraseñas Débiles, Adivinables o codificadas.
-  - Fáciles de adivinar o que, por defecto, permiten acceder a la configuración del dispositivo.
-- Servicios de Red Inseguro.
-  - Algunos dispositivos cuentan con servicios de red sin las medidas de seguridad adecuadas o tienen servicios innecesarios que solo los   hacen más vulnerables
-- Ecosistema de interfaces inseguras.
-  - Ocurre cuándo la vulnerabilidad no está en el dispositivo, sino en las aplicaciones que lo administran (ej. un reloj que se conecta a   una app insegura en el teléfono móvil).
-- Ausencia de un mecanismo de actualización seguro.
-  - Cuándo no se cuentan con mecanismos para realizar una actualización o no son seguros.
-- Uso de componentes inseguros o desactualizados.
-  - Corresponde al software o hardware con vulnerabilidades y que son utilizados en los dispositivos.
-- Insuficiente protección a la privacidad.
-  - Algunos dispositivos no cuentan con mecanismos suficientes para proteger y resguardar la información personal y     
-    confidencial que se guarda, procesa o transmite por el dispositivo.
-- Transferencia y almacenamiento de datos inseguros.
-  - Los dispositivos no cuentan con mecanismos para encriptar los datos.
-- Ausencia de gestión de dispositivos.
-  - Una vulnerabilidad de gestión en dónde los usuarios y empresas desconocen la cantidad de dispositivos que se conectan a su red y el tipo de información que manejan.
-- Configuraciones por defecto inseguras.
-  - Cuándo las configuraciones que vienen en el dispositivo por parte del fabricante son inseguras.
-- Ausencia de seguridad física.
-  - Cuándo se pueden hacer cambios físicos al dispositivo y explotar vulnerabilidades.
+__Contraseñas débiles, adivinables o codificadas.__
+
+Es común que muchos dispositivos cuenten con contraseñas fáciles de adivinar, como “1234” o “admin”. Estás contraseñas no ofrecen suficiente seguridad y si no se modifican, permiten un acceso fácil al dispositivo. Además, algunas contraseñas pueden estar codificadas u ocultas en el software del dispositivo, lo que deja la puerta abierta a posibles atacantes.
+Un ejemplo es un router con la contraseña por defecto “Admin”, si no hacemos ningún cambio al respecto los ciberdelincuentes podrán acceder al dispositivo con facilidad.
+
+__Servicios de red inseguros.__
+
+Algunos dispositivos tienen habilitados servicios de red que no están adecuadamente protegidos o que no son necesarios para su principal funcionamiento. Estos servicios pueden comprometer el dispositivo ante ataque, especialmente si están abiertos a conexiones remotas.
+Por ejemplo una impresora conectada a la red que tiene un servidor FTP por defecto, aunque no es necesario para su funcionamiento, puede ser explotada para robar información.
+
+__Ecosistema de interfaces inseguras.__
+
+Este tipo de vulnerabilidad no se encuentra directamente en el dispositivo, sino en las aplicaciones que interactúan con él. Un dispositivo seguro puede quedar expuesto si se conecta con una interfaz de software insegura.
+Un ejemplo puede ser un smartwatch que es seguro por si mismo, pero que se conecta a una aplicación en un smartphone sin actualizaciones de seguridad, lo que expone la información personal del usuario a posibles ataques.
+
+__Ausencia de un mecanismo de actualización seguro.__
+
+Muchos dispositivos no cuentan con un sistema fiable para recibir actualizaciones de seguridad, o bien las actualizaciones se distribuyen de manera insegura, sin verificar la autenticidad del software, dejando espacio para la instalación del malware.
+Por ejemplo  un dispositivo IoT que no puede recibir actualizaciones de seguridad automáticas o solo permite actualizaciones manuales a través de un canal no cifrado.
+
+__Uso de componentes inseguros o desactualizados.__
+
+Algunos dispositivos no continúan utilizando software o hardware con vulnerabilidades conocidas, lo que puede ser explotado por atacantes si no se actualizan o reemplazan. Este problema se ve agravado cuando los fabricantes utilizan componentes de bajo coste que no reciben actualizaciones de seguridad
+Un ejemplo pueden ser cámaras de seguridad que funcionan con versiones obsoletas del firmware, dejando abierta brechas que ya han sido corregidas en versiones más recientes
+
+__Insuficiente protección a la privacidad.__
+
+Varios dispositivos no disponen de medidas adecuadas para proteger la privacidad de los datos personales que procesan, esto puede implicar la falta de encriptación, almacenamiento inseguro de datos o políticas de privacidad deficientes
+Por ejemplo un altavoz inteligente que graba y almacena conversaciones sin el consentimiento del usuario o que no establecen mecanismos adecuados para proteger la información grabada.
+
+__Transferencia y almacenamiento de datos inseguros.__
+
+En muchos casos, los dispositivos no emplean protocolos de cifrado para la transferencia y el almacenamiento de datos, lo que permite que la información sensible sea interceptada o accedida por terceros no autorizados.
+Un ejemplo puede ser un dispositivo de monitoreo de salud que transmite información sin cifrar a un servidor en la nube, lo que permite a los atacantes interceptar datos confidenciales.
+
+__Ausencia de gestión de dispositivos.__
+
+Cuando las organizaciones o usuarios no gestionan adecuadamente los dispositivos conectados a su red, se pierde el control sobre qué dispositivos están conectados y qué información manejan. Esto puede generar riesgos significativos si un dispositivo se conecta sin que se detecte por parte del personal.
+Por ejemplo una empresa que no tiene sistema para monitorear cuantos dispositivos IoT están conectados a su red, permitiendo que un dispositivo comprometido actúe como puerta de entrada para un ataque a gran escala.
+
+__Configuraciones por defecto inseguras.__
+
+La mayoría de dispositivos que vienen con configuraciones predeterminadas son inseguras, como puertos abiertos, privilegios excesivos o servicios innecesarios activados. Si no se cambian estas configuraciones al instalar el dispositivo,  se deja expuesto a vulnerabilidades.
+Un ejemplo puede ser un sistema de videovigilancia que al ser instalado, tiene habilitado por defecto el acceso remoto sin cifrado, lo que permitiría que un atacante intercepte las transmisiones de vídeo.
+
+
+__Ausencia de seguridad física.__
+
+Algunos dispositivos no tienen medidas de seguridad para evitar que personas no autorizadas realicen cambios físicos en el hardware. Al tener acceso físico al dispositivo, un atacante puede modificar el dispositivo y obtener datos sensibles o comprometer su funcionamiento.
+Por ejemplo, un cajero automático que permite que al abrirlo físicamente, un atacante instale un dispositivo de clonación de tarjetas.
 
 <br>
 
