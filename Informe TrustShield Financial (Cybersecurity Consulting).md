@@ -153,3 +153,9 @@ Es crucial actualizar a una versión no vulnerable de Log4j (2.15.0 o posterior)
 
 # Propuesta de contramedidas
 ![Tabla 4](./Assets/RELEVANTES%20PARA%20TSF.png)
+
+# Conclusión
+En conclusión, nuestros hallazgos revelan una preocupante cantidad de routers IoT vulnerables, lo que destaca la exposición de estos dispositivos a ciberataques. Dado que los IoT están integrados en nuestra vida cotidiana, es crucial implementar medidas de seguridad sólidas, como actualizaciones regulares de firmware y el uso de contraseñas fuertes. Reforzar la seguridad de estos dispositivos no solo protege la privacidad de los usuarios, sino que también previene posibles amenazas a gran escala.
+
+Como vemos reflejado en la propuesta de contramedidas, al ser IoT nuestro tema, lo más importante es mantener estos dispositivos actualizados a la versión más reciente, evitando así (o al menos, poniendo más difícil a los atacantes), el acceso a estos dispositivos IoT.
+
