@@ -10,7 +10,7 @@
   - [Fase 2: Investigación de CVEs](#fase-2-investigación-de-cves)
 - [Clasificación y análisis](#clasificación-y-análisis)
   - [Gravedad](#gravedad)
-  - [Facilidad de explotación](#facilidad-de-explotacion)
+  - [Facilidad de explotación](#facilidad-de-explotación)
   - [Relevancia para TrustShield Financial](#relevancia-para-trustshield-financial)
 - [Propuesta de contramedidas](#propuesta-de-contramedidas)
 - [Conclusión](#conclusión)
