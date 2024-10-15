@@ -14,6 +14,7 @@
   - [Relevancia para TrustShield Financial](#relevancia-para-trustshield-financial)
 - [Propuesta de contramedidas](#propuesta-de-contramedidas)
 - [Conclusión](#conclusión)
+- [Fuentes](#fuentes)
 
 <br><br>
 # Introducción
@@ -249,7 +250,7 @@ Tal como se refleja en la propuesta de contramedidas, al ser los dispositivos Io
 
 [Desarrollo de categorías](https://www.computing.es/infraestructuras/las-vulnerabilidades-de-iot-mas-habituales-y-soluciones/)
 
-## Investigacion de CVE,s:
+## Investigación de CVE,s:
 
 [Fuente a búsqueda de CVE](https://www.cve.org/Media/News/AllNews)
 
